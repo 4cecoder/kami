@@ -356,7 +356,7 @@ fn ui<B: Backend>(f: &mut Frame<B>, app: &mut App) {
                 .bg(Color::Rgb(183, 142, 241))
                 .add_modifier(Modifier::BOLD),
         )
-        .highlight_symbol("📼");
+        .highlight_symbol("📖");
     f.render_stateful_widget(messages, chunks[0], &mut app.messages.state);
 
     let mut text = Text::from(Spans::from(msg));
