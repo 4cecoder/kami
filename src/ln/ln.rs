@@ -12,6 +12,7 @@ use std::{error::Error, io};
 use tui::{
     backend::{Backend, CrosstermBackend},
     layout::{Constraint, Direction, Layout},
+    
     style::{Color, Modifier, Style},
     text::{Span, Spans, Text},
     widgets::{Block, BorderType, Borders, List, ListItem, ListState, Paragraph},
@@ -355,7 +356,7 @@ fn ui<B: Backend>(f: &mut Frame<B>, app: &mut App) {
                 .bg(Color::Rgb(183, 142, 241))
                 .add_modifier(Modifier::BOLD),
         )
-        .highlight_symbol(">>");
+        .highlight_symbol("📼");
     f.render_stateful_widget(messages, chunks[0], &mut app.messages.state);
 
     let mut text = Text::from(Spans::from(msg));
